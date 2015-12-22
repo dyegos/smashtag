@@ -40,6 +40,8 @@ class TweetTableViewController: UITableViewController, UITextFieldDelegate {
     {
         super.viewDidLoad()
         
+        self.refreshControl = UIRefreshControl()
+        
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
         
@@ -52,7 +54,8 @@ class TweetTableViewController: UITableViewController, UITextFieldDelegate {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(animated: Bool)
+    {
         super.viewDidAppear(animated)
         
         setUpPushToRefresh()
@@ -74,7 +77,6 @@ class TweetTableViewController: UITableViewController, UITextFieldDelegate {
     
     private func setUpPushToRefresh()
     {
-        self.refreshControl = UIRefreshControl()
         self.refreshControl?.tintColor = UIColor.whiteColor()
         self.refreshControl?.backgroundColor = UIColor(red:0.33, green:0.67, blue:0.93, alpha:1.0)
         self.refreshControl?.attributedTitle = NSAttributedString(string: "Push to Refresh!")
@@ -181,15 +183,34 @@ class TweetTableViewController: UITableViewController, UITextFieldDelegate {
         return true
     }
     */
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        performSegueWithIdentifier(Segue.TweetIdentifier, sender: self)
+    }
 
-    /*
     // MARK: - Navigation
+    
+    private struct Segue
+    {
+        static let TweetIdentifier = "showTweet"
+    }
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if let tvc = segue.destinationViewController as? TweetViewController
+        {
+            if let identifier = segue.identifier
+            {
+                switch (identifier)
+                {
+                case Segue.TweetIdentifier:
+                    let indexPath = tableView.indexPathForSelectedRow
+                    tvc.tweet = tweets[indexPath!.section][indexPath!.row]
+                default: break
+                }
+            }
+        }
     }
-    */
-
 }

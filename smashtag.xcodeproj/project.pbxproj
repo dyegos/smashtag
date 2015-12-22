@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8837B53B1C28C1270083024E /* TweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837B53A1C28C1270083024E /* TweetViewController.swift */; };
 		8851783A1C258F3E0016BB39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885178391C258F3E0016BB39 /* AppDelegate.swift */; };
 		8851783F1C258F3E0016BB39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8851783D1C258F3E0016BB39 /* Main.storyboard */; };
 		885178411C258F3E0016BB39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 885178401C258F3E0016BB39 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8837B53A1C28C1270083024E /* TweetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetViewController.swift; sourceTree = "<group>"; };
 		885178361C258F3E0016BB39 /* smashtag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smashtag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		885178391C258F3E0016BB39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8851783E1C258F3E0016BB39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				885178451C258F3E0016BB39 /* Info.plist */,
 				885178691C25920C0016BB39 /* TweetTableViewController.swift */,
 				885178741C25A0210016BB39 /* TweetTableViewCell.swift */,
+				8837B53A1C28C1270083024E /* TweetViewController.swift */,
 			);
 			path = smashtag;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				885178721C2594F60016BB39 /* TwitterRequest.swift in Sources */,
 				885178731C2594F60016BB39 /* User.swift in Sources */,
 				8851783A1C258F3E0016BB39 /* AppDelegate.swift in Sources */,
+				8837B53B1C28C1270083024E /* TweetViewController.swift in Sources */,
 				885178701C2594F60016BB39 /* MediaItem.swift in Sources */,
 				885178711C2594F60016BB39 /* Tweet.swift in Sources */,
 				885178751C25A0210016BB39 /* TweetTableViewCell.swift in Sources */,
@@ -512,6 +516,7 @@
 				885178601C258F3E0016BB39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		885178611C258F3E0016BB39 /* Build configuration list for PBXNativeTarget "smashtagTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +525,7 @@
 				885178631C258F3E0016BB39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		885178641C258F3E0016BB39 /* Build configuration list for PBXNativeTarget "smashtagUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +534,7 @@
 				885178661C258F3E0016BB39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
