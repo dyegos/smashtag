@@ -112,27 +112,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rds-JL-HnM">
-                                <rect key="frame" x="180" y="161" width="240" height="277"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Jp-zt-we1">
+                                <rect key="frame" x="78" y="72" width="502" height="20"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="277" id="E2C-bX-sS1"/>
-                                    <constraint firstAttribute="width" constant="240" id="e6o-lX-87w"/>
-                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4y2-na-ASb">
+                                <rect key="frame" x="20" y="130" width="560" height="20"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hastag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJq-Qw-nJc">
+                                <rect key="frame" x="78" y="100" width="502" height="17"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C63-iS-8Hc">
+                                <rect key="frame" x="20" y="72" width="50" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="1Q1-qK-xLh"/>
+                                    <constraint firstAttribute="height" constant="50" id="Xb6-Bx-7Ge"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="be9-ee-12r">
+                                <rect key="frame" x="20" y="158" width="560" height="284"/>
+                                <animations/>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Rds-JL-HnM" firstAttribute="centerY" secondItem="IN3-pH-2ti" secondAttribute="centerY" id="Kef-Qj-uEz"/>
-                            <constraint firstItem="Rds-JL-HnM" firstAttribute="centerX" secondItem="IN3-pH-2ti" secondAttribute="centerX" id="c0H-e2-qbq"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="C63-iS-8Hc" secondAttribute="leading" id="0aF-zf-TnL"/>
+                            <constraint firstItem="9Jp-zt-we1" firstAttribute="leading" secondItem="C63-iS-8Hc" secondAttribute="trailing" constant="8" symbolic="YES" id="1qp-ht-ywn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="be9-ee-12r" secondAttribute="trailing" id="Hcz-Tx-aZX"/>
+                            <constraint firstItem="4y2-na-ASb" firstAttribute="top" secondItem="C63-iS-8Hc" secondAttribute="bottom" constant="8" symbolic="YES" id="Izp-dx-xSL"/>
+                            <constraint firstItem="4y2-na-ASb" firstAttribute="leading" secondItem="C63-iS-8Hc" secondAttribute="leading" id="Pl5-ti-rzx"/>
+                            <constraint firstItem="be9-ee-12r" firstAttribute="top" secondItem="4y2-na-ASb" secondAttribute="bottom" constant="8" symbolic="YES" id="Rky-QO-9f6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Jp-zt-we1" secondAttribute="trailing" id="ZyI-bb-jXs"/>
+                            <constraint firstItem="UJq-Qw-nJc" firstAttribute="leading" secondItem="C63-iS-8Hc" secondAttribute="trailing" constant="8" symbolic="YES" id="cms-jZ-aT3"/>
+                            <constraint firstItem="C63-iS-8Hc" firstAttribute="top" secondItem="plE-Tw-pjB" secondAttribute="bottom" constant="8" symbolic="YES" id="deT-Uj-QGR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4y2-na-ASb" secondAttribute="trailing" id="ip3-Xs-iQj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UJq-Qw-nJc" secondAttribute="trailing" id="kLx-tm-O5n"/>
+                            <constraint firstItem="be9-ee-12r" firstAttribute="leading" secondItem="4y2-na-ASb" secondAttribute="leading" id="pQj-vZ-QsF"/>
+                            <constraint firstItem="be9-ee-12r" firstAttribute="centerY" secondItem="IN3-pH-2ti" secondAttribute="centerY" id="q8m-gd-SOe"/>
+                            <constraint firstItem="9Jp-zt-we1" firstAttribute="top" secondItem="plE-Tw-pjB" secondAttribute="bottom" constant="8" symbolic="YES" id="vQH-pm-Dc3"/>
+                            <constraint firstItem="UJq-Qw-nJc" firstAttribute="top" secondItem="9Jp-zt-we1" secondAttribute="bottom" constant="8" symbolic="YES" id="ywC-PK-7Mf"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tweetText" destination="Rds-JL-HnM" id="oUP-5v-RPc"/>
+                        <outlet property="media" destination="be9-ee-12r" id="IHT-ES-xT3"/>
+                        <outlet property="userImage" destination="C63-iS-8Hc" id="If2-jK-B6R"/>
+                        <outlet property="userName" destination="9Jp-zt-we1" id="haN-Ta-jXw"/>
+                        <outlet property="userTweet" destination="4y2-na-ASb" id="YQn-qg-MTp"/>
+                        <outlet property="userhastag" destination="UJq-Qw-nJc" id="Dxg-X1-Ilo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MQb-6F-Oo0" userLabel="First Responder" sceneMemberID="firstResponder"/>
